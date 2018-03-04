@@ -15,24 +15,23 @@ import org.tensorflow.Tensor;
 import java.nio.FloatBuffer;
 import java.util.List;
 
+import static edu.ml.tensorflow.Config.GRAPH_FILE;
+import static edu.ml.tensorflow.Config.HEIGHT;
+import static edu.ml.tensorflow.Config.LABEL_FILE;
+import static edu.ml.tensorflow.Config.MEAN;
+import static edu.ml.tensorflow.Config.WIDTH;
+
 /**
- * TensorFlow Java API example to detect objects using pre-trained models.
+ * ObjectDetector class to detect objects using pre-trained models with TensorFlow Java API.
  */
 public class ObjectDetector {
     private final static Logger LOGGER = LoggerFactory.getLogger(ObjectDetector.class);
-    private final static String GRAPH = "/YOLO/yolo-voc.pb";
-    private final static String LABEL_FILE = "/YOLO/yolo-voc-labels.txt";
-
-    private final static int HEIGHT = 416;
-    private final static int WIDTH = 416;
-    private final static float MEAN = 255f;
-
     private byte[] GRAPH_DEF;
     private List<String> LABELS;
 
     public ObjectDetector() {
         try {
-            GRAPH_DEF = IOUtil.readAllBytesOrExit(GRAPH);
+            GRAPH_DEF = IOUtil.readAllBytesOrExit(GRAPH_FILE);
             LABELS = IOUtil.readAllLinesOrExit(LABEL_FILE);
         } catch (ServiceException ex) {
             LOGGER.error("Download one of my graph file to run the program! \n" +

@@ -2,9 +2,6 @@ package edu.ml.tensorflow.model;
 
 /**
  * Model to store the position of the bounding boxes
- *
- * Created by Zoltan Szabo on 1/14/18.
- * URL: https://github.com/szaza/android-yolo-v2
  */
 
 public class BoxPosition {

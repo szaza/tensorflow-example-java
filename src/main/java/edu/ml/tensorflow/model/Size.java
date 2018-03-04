@@ -1,5 +1,8 @@
 package edu.ml.tensorflow.model;
 
+/**
+ * Size class to store information about the object size.
+ */
 public class Size {
     private int width;
     private int height;

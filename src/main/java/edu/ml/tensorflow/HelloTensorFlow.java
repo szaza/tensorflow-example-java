@@ -5,6 +5,9 @@ import org.tensorflow.Session;
 import org.tensorflow.Tensor;
 import org.tensorflow.TensorFlow;
 
+/**
+ * Hello TensorFlow program to check if everything is well configured.
+ */
 public class HelloTensorFlow {
     public static void main(String[] args) throws Exception {
         try (Graph graph = new Graph()) {

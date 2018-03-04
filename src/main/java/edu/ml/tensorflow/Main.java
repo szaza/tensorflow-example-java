@@ -1,4 +1,4 @@
-import edu.ml.tensorflow.ObjectDetector;
+package edu.ml.tensorflow;
 
 public class Main {
     private final static String IMAGE = "/image/tesla.jpg";

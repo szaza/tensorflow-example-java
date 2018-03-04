@@ -13,6 +13,10 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ * YOLOClassifier class implemented in Java by using the TensorFlow Java API
+ * I also used this class in my android sample application here: https://github.com/szaza/android-yolo-v2
+ */
 public class YOLOClassifier {
     private final static float OVERLAP_THRESHOLD = 0.5f;
     private final static double anchors[] = {1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52};
@@ -46,7 +50,7 @@ public class YOLOClassifier {
     /**
      * It classifies the object/objects on the image
      *
-     * @param tensorFlowOutput output from the tensorflow, it is a 13x13x((num_class +1) * 5) tensor
+     * @param tensorFlowOutput output from the TensorFlow, it is a 13x13x((num_class +1) * 5) tensor
      * 125 = (numClass +  Tx, Ty, Tw, Th, To) * 5 - cause we have 5 boxes per each cell
      * @param labels a string vector with the labels
      * @return a list of recognition objects
@@ -93,19 +97,13 @@ public class YOLOClassifier {
         for (int i=0; i<boundingBox.getClasses().length; i++) {
             ArgMax.Result argMax = new ArgMax(new SoftMax(boundingBox.getClasses()).getValue()).getResult();
             double confidenceInClass = argMax.getMaxValue() * boundingBox.getConfidence();
-
-            //double[] confidenceInClasses = new SoftMax(boundingBox.getClasses()).getValue();
-            //for (int j=0; j<confidenceInClasses.length; j++) {
-                //float confidenceInClass = (float) (confidenceInClasses[j] * boundingBox.getConfidence());
-                if (confidenceInClass > THRESHOLD) {
-                    //predictionQueue.add(new Recognition(j, labels.get(j), confidenceInClass,
-                    predictionQueue.add(new Recognition(argMax.getIndex(), labels.get(argMax.getIndex()), (float) confidenceInClass,
-                            new BoxPosition((float) (boundingBox.getX() - boundingBox.getWidth() / 2),
-                                    (float) (boundingBox.getY() - boundingBox.getHeight() / 2),
-                                    (float) boundingBox.getWidth(),
-                                    (float) boundingBox.getHeight())));
-                }
-            //}
+            if (confidenceInClass > THRESHOLD) {
+                predictionQueue.add(new Recognition(argMax.getIndex(), labels.get(argMax.getIndex()), (float) confidenceInClass,
+                        new BoxPosition((float) (boundingBox.getX() - boundingBox.getWidth() / 2),
+                                (float) (boundingBox.getY() - boundingBox.getHeight() / 2),
+                                (float) boundingBox.getWidth(),
+                                (float) boundingBox.getHeight())));
+            }
         }
     }
 
