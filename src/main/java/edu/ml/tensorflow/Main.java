@@ -1,7 +1,7 @@
 package edu.ml.tensorflow;
 
 public class Main {
-    private final static String IMAGE = "/image/tesla.jpg";
+    private final static String IMAGE = "/image/cow-and-bird.jpg";
 
     public static void main(String[] args) {
         ObjectDetector objectDetector = new ObjectDetector();

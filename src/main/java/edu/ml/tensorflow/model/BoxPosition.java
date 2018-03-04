@@ -3,7 +3,6 @@ package edu.ml.tensorflow.model;
 /**
  * Model to store the position of the bounding boxes
  */
-
 public class BoxPosition {
     private float left;
     private float top;
@@ -21,11 +20,20 @@ public class BoxPosition {
         init();
     }
 
-    public BoxPosition(BoxPosition boxPosition) {
+    public BoxPosition(final BoxPosition boxPosition) {
         this.left = boxPosition.left;
         this.top = boxPosition.top;
         this.width = boxPosition.width;
         this.height = boxPosition.height;
+
+        init();
+    }
+
+    public BoxPosition(final BoxPosition boxPosition, final float scaleX, final float scaleY) {
+        this.left = boxPosition.left * scaleX;
+        this.top = boxPosition.top * scaleY;
+        this.width = boxPosition.width * scaleX;
+        this.height = boxPosition.height * scaleY;
 
         init();
     }
@@ -46,24 +54,48 @@ public class BoxPosition {
         return left;
     }
 
+    public int getLeftInt() {
+        return (int) left;
+    }
+
     public float getTop() {
         return top;
+    }
+
+    public int getTopInt() {
+        return (int) top;
     }
 
     public float getWidth() {
         return width;
     }
 
+    public int getWidthInt() {
+        return (int) width;
+    }
+
     public float getHeight() {
         return height;
+    }
+
+    public int getHeightInt() {
+        return (int) height;
     }
 
     public float getRight() {
         return right;
     }
 
+    public int getRightInt() {
+        return (int) right;
+    }
+
     public float getBottom() {
         return bottom;
+    }
+
+    public int getBottomInt() {
+        return (int) bottom;
     }
 
     @Override

@@ -19,16 +19,16 @@ public final class IOUtil {
     private final static Logger LOGGER = LoggerFactory.getLogger(IOUtil.class);
     private IOUtil() {}
 
-    public static byte[] readAllBytesOrExit(String fileName) {
+    public static byte[] readAllBytesOrExit(final String fileName) {
         try {
             return IOUtils.toByteArray(ObjectDetector.class.getResourceAsStream(fileName));
-        } catch (IOException ex) {
+        } catch (IOException | NullPointerException ex) {
             LOGGER.error("Failed to read [{}]!", fileName);
             throw new ServiceException("Failed to read [" + fileName + "]!", ex);
         }
     }
 
-    public static List<String> readAllLinesOrExit(String filename) {
+    public static List<String> readAllLinesOrExit(final String filename) {
         try {
             File file = new File(ObjectDetector.class.getResource(filename).toURI());
             return Files.readAllLines(file.toPath(), Charset.forName("UTF-8"));
@@ -36,5 +36,15 @@ public final class IOUtil {
             LOGGER.error("Failed to read [{}]!", filename, ex.getMessage());
             throw new ServiceException("Failed to read [" + filename + "]!", ex);
         }
+    }
+
+    public static void createDirIfNotExists(final File directory) {
+        if (!directory.exists()) {
+            directory.mkdir();
+        }
+    }
+
+    public static String getFileName(final String path) {
+        return path.substring(path.lastIndexOf("/") + 1, path.length());
     }
 }

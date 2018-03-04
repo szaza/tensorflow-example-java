@@ -18,7 +18,7 @@ Please make sure that you've set properly the *GRAPH_FILE* and *LABEL_FILE* vari
 ##### Compile the source by using Gradle
 By default it runs on CPU. If you want to run this program with GPU support please change this line in the `build.gradle` file: <br/>
 `compile group: 'org.tensorflow', name: 'libtensorflow_jni', version: '1.6.0'` to <br/> 
-`compile group: 'org.tensorflow', name: 'libtensorflow_jni-gpu', version: '1.6.0'`
+`compile group: 'org.tensorflow', name: 'libtensorflow_jni_gpu', version: '1.6.0'`
 
 Specify the path for the image in the [Main](https://github.com/szaza/tensorflow-java-yolo/blob/master/src/main/java/edu/ml/tensorflow/Main.java) class (for sure it can be modified to read from the command line arguments).<br/>
 Compile the code with the following command: `./gradlew clean build`
@@ -27,5 +27,5 @@ Compile the code with the following command: `./gradlew clean build`
 Type the `./gradlew run` command in the command line window and hit enter. You are done!
 The output is printed out with the LogBack logging framework so, it should looks like:
 
-`INFO  edu.ml.tensorflow.ObjectDetector - Object: car - confidence: 0.8876258` <br/>
-`INFO  edu.ml.tensorflow.ObjectDetector - Object: person - confidence: 0.82162035`
+`INFO  edu.ml.tensorflow.ObjectDetector - Object: cow - confidence: 0.8864294` <br/>
+`INFO  edu.ml.tensorflow.ObjectDetector - Object: bird - confidence: 0.64604723`

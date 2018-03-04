@@ -33,6 +33,10 @@ public final class Recognition {
         return confidence;
     }
 
+    public BoxPosition getScaledLocation(final float scaleX, final float scaleY) {
+        return new BoxPosition(location, scaleX, scaleY);
+    }
+
     public BoxPosition getLocation() {
         return new BoxPosition(location);
     }

@@ -4,6 +4,7 @@ import edu.ml.tensorflow.classifier.YOLOClassifier;
 import edu.ml.tensorflow.model.Recognition;
 import edu.ml.tensorflow.util.GraphBuilder;
 import edu.ml.tensorflow.util.IOUtil;
+import edu.ml.tensorflow.util.ImageUtil;
 import edu.ml.tensorflow.util.ServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,10 +17,9 @@ import java.nio.FloatBuffer;
 import java.util.List;
 
 import static edu.ml.tensorflow.Config.GRAPH_FILE;
-import static edu.ml.tensorflow.Config.HEIGHT;
 import static edu.ml.tensorflow.Config.LABEL_FILE;
 import static edu.ml.tensorflow.Config.MEAN;
-import static edu.ml.tensorflow.Config.WIDTH;
+import static edu.ml.tensorflow.Config.SIZE;
 
 /**
  * ObjectDetector class to detect objects using pre-trained models with TensorFlow Java API.
@@ -41,12 +41,14 @@ public class ObjectDetector {
 
     /**
      * Detect objects on the given image
-     * @param imageLocation
+     * @param imageLocation the location of the image
      */
     public void detect(final String imageLocation) {
-        try (Tensor<Float> image = normalizeImage(IOUtil.readAllBytesOrExit(imageLocation))) {
-            List<Recognition> recognitions = YOLOClassifier.getInstance().classifyImage(executeYOLOGraph(image), LABELS);
+        byte[] image = IOUtil.readAllBytesOrExit(imageLocation);
+        try (Tensor<Float> normalizedImage = normalizeImage(image)) {
+            List<Recognition> recognitions = YOLOClassifier.getInstance().classifyImage(executeYOLOGraph(normalizedImage), LABELS);
             printToConsole(recognitions);
+            ImageUtil.getInstance().labelImage(image, recognitions, IOUtil.getFileName(imageLocation));
         }
     }
 
@@ -68,7 +70,7 @@ public class ObjectDetector {
                                                     graphBuilder.constant("input", imageBytes), 3),
                                             Float.class),
                                     graphBuilder.constant("make_batch", 0)),
-                            graphBuilder.constant("size", new int[]{HEIGHT, WIDTH})),
+                            graphBuilder.constant("size", new int[]{SIZE, SIZE})),
                     graphBuilder.constant("scale", MEAN));
 
             try (Session session = new Session(graph)) {
@@ -80,7 +82,7 @@ public class ObjectDetector {
     /**
      * Executes graph on the given preprocessed image
      * @param image preprocessed image
-     * @return output tensor returned by tensorflow
+     * @return output tensor returned by tensorFlow
      */
     private float[] executeYOLOGraph(final Tensor<Float> image) {
         try (Graph graph = new Graph()) {
@@ -96,7 +98,7 @@ public class ObjectDetector {
     }
 
     /**
-     * Prints out the recoginez objects and its confidence
+     * Prints out the recognize objects and its confidence
      * @param recognitions list of recognitions
      */
     private void printToConsole(final List<Recognition> recognitions) {
