@@ -7,7 +7,7 @@ implemented a YOLOClassifier in java.
 
 ### Compile and run
 
-#####Download frozen graphs
+##### Download frozen graphs
 Before compiling the application you have to create/download some graph definition files. To try out the application you
 can use my frozen graphs, which are trained to the Pascal VOC data set with 20 classes. You can download them from my
 google drive [here](https://drive.google.com/open?id=1GfS1Yle7Xari1tRUEi2EDYedFteAOaoN). Place these files under the
