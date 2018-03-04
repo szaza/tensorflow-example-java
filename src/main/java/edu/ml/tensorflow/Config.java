@@ -12,5 +12,5 @@ public interface Config {
     float MEAN = 255f;
 
     // Output directory
-    String OUTPUT_DIR = "./out/images";
+    String OUTPUT_DIR = "./sample";
 }

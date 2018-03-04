@@ -48,8 +48,6 @@ public class ImageUtil {
         float scaleY = (float) bufferedImage.getHeight() / (float) Config.SIZE;
         Graphics2D graphics = (Graphics2D) bufferedImage.getGraphics();
 
-        graphics.setColor(Color.darkGray);
-
         for (Recognition recognition: recognitions) {
             BoxPosition box = recognition.getScaledLocation(scaleX, scaleY);
             //draw text
