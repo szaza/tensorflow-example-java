@@ -8,20 +8,20 @@ dependency management tool. In my sample code I used the YOLO vesion 2 to detect
 
 <table>
   <tr>
-    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/src/main/resources/image/cow-and-bird.jpg" title="cow and bird" alt="cow and bird" width="500"/></td>
-    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/cow-and-bird.jpg" title="cow and bird detected by yolo" alt="cow and bird detected by yolo" width="500"/></td>
+    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/src/main/resources/image/cow-and-bird.jpg" title="tensorflow java api cow and bird" alt="tensorflow java api cow and bird" width="500"/></td>
+    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/cow-and-bird.jpg" title="tensorflow java api sample" alt="tensorflow java api sample" width="500"/></td>
   </tr>
   <tr>
     <td>Input image</td>
-    <td>Bird and cow detected</td>
+    <td>Bird and cow detected by YOLO using TensorFlow Java API</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/src/main/resources/image/eagle.jpg" title="eagle" alt="eagle" width="500"/></td>
-    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/eagle.jpg" title="eagle detected by yolo" alt="objects detected by yolo via tensorflow java api" width="500"/></td>
+    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/src/main/resources/image/eagle.jpg" title="tensorflow yolo java eagle" alt="tensorflow yolo java eagle" width="500"/></td>
+    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/eagle.jpg" title="tensoflow java yolo sample" alt="java tensorflow yolo sample" width="500"/></td>
   </tr>
   <tr>
     <td>Input image</td>
-    <td>Bird detected</td>
+    <td>Bird detected by YOLO using TensorFlow Java API</td>
   </tr>  
  </table>
 
@@ -58,8 +58,8 @@ Is it much slower than the TensorFlow Python or TensorFlow C++ API? <br/>
 
 <table>
   <tr>
-    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/src/main/resources/image/tesla.jpg" title="tesla" alt="tesla" height="400"/></td>
-    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/tesla.jpg" title="tesla" alt="tesla" height="400"/></td>
+    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/src/main/resources/image/tesla.jpg" title="tensorflow java tesla" alt="tensorflow java tesla" height="400"/></td>
+    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/tesla.jpg" title="yolo java tensorflow tesla" alt="yolo java tensorflow tesla" height="400"/></td>
   </tr>
   <tr>
     <td>Me and a tesla</td>
