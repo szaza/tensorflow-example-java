@@ -50,7 +50,7 @@ The output is printed out with the LogBack logging framework so, it looks like:
 `INFO  edu.ml.tensorflow.ObjectDetector - Object: bird - confidence: 0.64604723`
 
 ##### Note
-If you would like to create a client-server architecture with Spring Framework check this project: [TensorFlow Java tutorial with Spring](https://github.com/szaza/java-tensorflow-spring).
+If you would like to create a client-server architecture with Spring Framework check this project: [TensorFlow Java tutorial with Spring](https://github.com/szaza/tensorflow-java-examples-spring).
 
 ##### FAQ
 Is it much slower than the TensorFlow Python or TensorFlow C++ API? <br/>
