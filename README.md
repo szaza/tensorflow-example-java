@@ -1,4 +1,4 @@
-# TensorFlow Java API sample program with YOLOv2 built by Gradle
+# TensorFlow Java sample program with YOLOv2 built by Gradle
 TensorFlow Java API is a new opportunity to use TensorFlow from Java applications. 
 On the [official TensorFlow site](https://www.tensorflow.org/install/install_java) you can find a description about the
 Java API usage with Maven using an Inception model. This sample shows you how to use TensorFlow from Java programs using Gradle as build and 
@@ -8,8 +8,8 @@ dependency management tool. In my sample code I used the YOLO vesion 2 to detect
 
 <table>
   <tr>
-    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/src/main/resources/image/cow-and-bird.jpg" title="tensorflow java api cow and bird" alt="tensorflow java api cow and bird" width="500"/></td>
-    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/cow-and-bird.jpg" title="tensorflow java api sample" alt="tensorflow java api sample" width="500"/></td>
+    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/src/main/resources/image/cow-and-bird.jpg" title="tensorflow java api cow and bird" alt="tensorflow java example cow and bird" width="500"/></td>
+    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/cow-and-bird.jpg" title="tensorflow java sample" alt="tensorflow java sample" width="500"/></td>
   </tr>
   <tr>
     <td>Input image</td>
@@ -50,7 +50,7 @@ The output is printed out with the LogBack logging framework so, it looks like:
 `INFO  edu.ml.tensorflow.ObjectDetector - Object: bird - confidence: 0.64604723`
 
 ##### Note
-If you would like to create a client-server architecture with Spring Framework check this project: [TensorFlow Java API with Spring](https://github.com/szaza/java-tensorflow-spring).
+If you would like to create a client-server architecture with Spring Framework check this project: [TensorFlow Java tutorial with Spring](https://github.com/szaza/java-tensorflow-spring).
 
 ##### FAQ
 Is it much slower than the TensorFlow Python or TensorFlow C++ API? <br/>
@@ -59,7 +59,7 @@ Is it much slower than the TensorFlow Python or TensorFlow C++ API? <br/>
 <table>
   <tr>
     <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/src/main/resources/image/tesla.jpg" title="tensorflow java tesla" alt="tensorflow java tesla" height="400"/></td>
-    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/tesla.jpg" title="yolo java tensorflow tesla" alt="yolo java tensorflow tesla" height="400"/></td>
+    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/tesla.jpg" title="java tensorflow tesla" alt="java tensorflow tesla" height="400"/></td>
   </tr>
   <tr>
     <td>Me and a tesla</td>
