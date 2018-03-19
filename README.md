@@ -62,7 +62,7 @@ Is it much slower than the TensorFlow Python or TensorFlow C++ API? <br/>
     <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/tesla.jpg" title="java tensorflow tesla" alt="java tensorflow tesla" height="400"/></td>
   </tr>
   <tr>
-    <td>Me and a tesla</td>
+    <td>Me and a tesla car</td>
     <td>Unfortunately, it is not my car.</td>
   </tr>
 </table>
