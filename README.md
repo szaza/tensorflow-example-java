@@ -29,7 +29,7 @@ dependency management tool. In my sample code I used the YOLO vesion 2 to detect
 
 ##### Download frozen graphs
 Before compiling the application you have to create/download some graph definition files. To try out the application you
-can use my frozen graphs, which are trained to the Pascal VOC data set with 20 classes. You can download them from my
+can use my frozen graphs, which are trained to the Pascal VOC dataset with 20 classes. You can download them from my
 google drive [here](https://drive.google.com/open?id=1GfS1Yle7Xari1tRUEi2EDYedFteAOaoN). Place these files under the
 `src/main/resources/YOLO` directory.
 
@@ -55,15 +55,3 @@ If you would like to create a client-server architecture with Spring Framework c
 ##### FAQ
 Is it much slower than the TensorFlow Python or TensorFlow C++ API? <br/>
    No, because it communicates through Java Native Interface (JNI)
-
-<table>
-  <tr>
-    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/src/main/resources/image/tesla.jpg" title="tensorflow java tesla" alt="tensorflow java tesla" height="400"/></td>
-    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/tesla.jpg" title="java tensorflow tesla" alt="java tensorflow tesla" height="400"/></td>
-  </tr>
-  <tr>
-    <td>Me and a tesla car</td>
-    <td>Unfortunately, it is not my car.</td>
-  </tr>
-</table>
-Hopefully, one day...
