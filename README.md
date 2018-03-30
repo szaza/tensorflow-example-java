@@ -1,4 +1,4 @@
-# TensorFlow Java sample program with YOLOv2 built by Gradle
+# TensorFlow Java example with YOLOv2 built by Gradle
 TensorFlow Java API is a new opportunity to use TensorFlow from Java applications. 
 On the [official TensorFlow site](https://www.tensorflow.org/install/install_java) you can find a description about the
 Java API usage with Maven using an Inception model. This sample shows you how to use TensorFlow from Java programs using Gradle as build and 
@@ -9,7 +9,7 @@ dependency management tool. In my sample code I used the YOLO vesion 2 to detect
 <table>
   <tr>
     <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/src/main/resources/image/cow-and-bird.jpg" title="tensorflow java api cow and bird" alt="tensorflow java example cow and bird" width="500"/></td>
-    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/cow-and-bird.jpg" title="tensorflow java sample" alt="tensorflow java sample" width="500"/></td>
+    <td><img src="https://github.com/szaza/tensorflow-java-yolo/blob/master/sample/cow-and-bird.jpg" title="tensorflow java example" alt="tensorflow java example" width="500"/></td>
   </tr>
   <tr>
     <td>Input image</td>
