@@ -27,6 +27,15 @@ dependency management tool. In my sample code I used the YOLO vesion 2 to detect
 
 ### Compile and run
 
+**Preconditions:**
+- Java JDK 1.8 or greater;
+- TensorFlow 1.6 or grater;
+- Git version control system;
+
+**Strongly recommended to install:**
+- nVidia CUDA Toolkit 8.0 or higher version;
+- nVidia cuDNN GPU accelerated deep learning framework;
+
 ##### Download frozen graphs
 Before compiling the application you have to create/download some graph definition files. To try out the application you
 can use my frozen graphs, which are trained to the Pascal VOC dataset with 20 classes. You can download them from my
