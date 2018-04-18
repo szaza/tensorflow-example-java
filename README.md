@@ -63,7 +63,7 @@ The output is printed out with the LogBack logging framework so, it looks like:
 
 **Note**
 
-If you would like to create a client-server architecture with Spring Framework check this project: [TensorFlow Java tutorial with Spring](https://github.com/szaza/tensorflow-java-examples-spring).
+If you would like to create a client-server architecture with Spring Framework check this project: [TensorFlow Java tutorial with Spring](https://sites.google.com/view/tensorflow-example-java-api/tensorflow-java-api-with-spring-framework).
 
 **FAQ**
 
