@@ -69,3 +69,10 @@ If you would like to create a client-server architecture with Spring Framework c
 
 Is it much slower than the TensorFlow Python or TensorFlow C++ API? <br/>
    No, because it communicates through Java Native Interface (JNI)
+
+## News about YoloV3 support
+
+The current solution doesn't support the YoloV3 model and unfortunately, I do not have time to implement it, however I would be very happy if I could help to implement and I could review a PR with this feture. 
+For this reason I've started a new branch here: https://github.com/szaza/tensorflow-java-examples-spring/tree/feature/add-yolov3-support; If you are interested in this feature and you would like to be a collabortor, please add a comment for this thread: https://github.com/szaza/tensorflow-java-examples-spring/issues/2;
+
+Many-many thank for any support!
